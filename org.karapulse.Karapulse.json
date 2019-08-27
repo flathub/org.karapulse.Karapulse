@@ -106,8 +106,8 @@
                 "npm-generated-sources.json",
                 {
                     "type": "archive",
-                    "url": "https://gitlab.freedesktop.org/gdesmott/karapulse/uploads/994ae654d1e2b1cbf19bd3158378cce2/karapulse-0.1.0.tar.xz",
-                    "sha256": "e7791ce42683032f3cdfd875e129317c98ce1a059901e0c78e7c8110657177d8"
+                    "url": "http://desmottes.be/~cassidy/files/brol/karapulse-0.1.0.tar.xz",
+                    "sha256": "4bd9b94860871e31be99430493c3bee317ee141e35c31bb5c312134bcbdd9a8d"
                 }
             ]
         }
