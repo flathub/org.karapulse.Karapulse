@@ -1,7 +1,7 @@
 {
     "app-id": "org.karapulse.Karapulse",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.32",
+    "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "karapulse",
     "finish-args": [
@@ -73,6 +73,31 @@
             ],
             "build-commands": [
                 "./install.sh --prefix=/app/sdk/rust --disable-ldconfig --verbose"
+            ]
+        },
+        {
+            "name": "python-2.7",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz",
+                    "sha256": "01da813a3600876f03f46db11cc5c408175e99f03af2ba942ef324389a83bad5"
+                }
+            ],
+            "config-opts": [
+                "--enable-shared",
+                "--with-ensurepip=yes",
+                "--with-system-expat",
+                "--with-system-ffi",
+                "--enable-loadable-sqlite-extensions",
+                "--with-dbmliborder=gdbm",
+                "--enable-unicode=ucs4"
+            ],
+            "post-install": [
+                "chmod 644 $FLATPAK_DEST/lib/libpython2.7.so.1.0"
+            ],
+            "cleanup": [
+                "*"
             ]
         },
         {
