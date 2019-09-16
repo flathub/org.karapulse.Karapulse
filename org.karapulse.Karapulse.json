@@ -17,6 +17,13 @@
         "--socket=pulseaudio",
         "--device=dri"
     ],
+    "add-extensions": {
+	"org.freedesktop.Platform.ffmpeg-full": {
+            "directory": "lib/ffmpeg",
+            "version": "19.08",
+            "add-ld-path": "."
+        }
+    },
     "cleanup": [
         "/sdk",
         "/lib/node_modules",
@@ -111,5 +118,8 @@
                 }
             ]
         }
+    ],
+    "cleanup-commands" : [
+        "mkdir -p /app/lib/ffmpeg"
     ]
 }
