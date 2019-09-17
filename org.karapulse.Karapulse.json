@@ -99,7 +99,7 @@
             "buildsystem": "meson",
             "config-opts": [
                 "-Dcdg-plugin=true",
-		"-Dnpm-cache=/run/build/karapulse/npm-cache/",
+                "-Dnpm-cache=/run/build/karapulse/npm-cache/",
                 "-Doffline=true"
             ],
             "sources": [
