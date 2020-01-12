@@ -21,9 +21,9 @@
         "/bin/npx"
     ],
     "build-options": {
-        "append-path": "/app/sdk/rust/bin",
+        "append-path": "/app/sdk/bin",
         "env": {
-            "RUSTFLAGS": "--remap-path-prefix =../ --error-format=short",
+            "RUSTFLAGS": "--remap-path-prefix =../",
             "CARGO_HOME": "/run/build/Karapulse/cargo",
             "RUST_BACKTRACE": "1",
             "RUST_LOG": "karapulse=debug"
@@ -39,80 +39,29 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://static.rust-lang.org/dist/2019-08-20/rust-nightly-x86_64-unknown-linux-gnu.tar.gz",
-                    "sha256": "c2c8adc6601b0d524eab98512c29d1d7ce2914422a6fdf6ebaeaa597a1720d2e"
-                },
-                {
-                    "type": "archive",
-                    "only-arches": [
-                        "i386"
-                    ],
-                    "url": "https://static.rust-lang.org/dist/2019-08-20/rust-nightly-i686-unknown-linux-gnu.tar.gz",
-                    "sha256": "68962e579dd0ffa7ad2eb869350d4f3a25fb1db52b4a99a8893afb9af14fcf01"
-                },
-                {
-                    "type": "archive",
-                    "only-arches": [
-                        "arm"
-                    ],
-                    "url": "https://static.rust-lang.org/dist/2019-08-20/rust-nightly-arm-unknown-linux-gnueabihf.tar.gz",
-                    "sha256": "22e9fc53fc4e907c3ddbc6ecf51976ed635496dea3bbd6bad5c4bd7711020383"
-                },
-                {
-                    "type": "archive",
-                    "only-arches": [
-                        "aarch64"
-                    ],
-                    "url": "https://static.rust-lang.org/dist/2019-08-20/rust-nightly-aarch64-unknown-linux-gnu.tar.gz",
-                    "sha256": "2f1d2a4a949800feb4609fe26eaa3c5eeacda2541125e788e849d8973906390d"
+                    "url": "https://static.rust-lang.org/dist/2020-01-07/rust-nightly-x86_64-unknown-linux-gnu.tar.gz",
+                    "sha256": "98e563ba7db92511718112d54de0546793677e9942f26b2c7e91dc291bb958af"
                 }
             ],
             "build-commands": [
-                "./install.sh --prefix=/app/sdk/rust --disable-ldconfig --verbose"
-            ]
-        },
-        {
-            "name": "python-2.7",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz",
-                    "sha256": "01da813a3600876f03f46db11cc5c408175e99f03af2ba942ef324389a83bad5"
-                }
-            ],
-            "config-opts": [
-                "--enable-shared",
-                "--with-ensurepip=yes",
-                "--with-system-expat",
-                "--with-system-ffi",
-                "--enable-loadable-sqlite-extensions",
-                "--with-dbmliborder=gdbm",
-                "--enable-unicode=ucs4"
-            ],
-            "post-install": [
-                "chmod 644 $FLATPAK_DEST/lib/libpython2.7.so.1.0"
-            ],
-            "cleanup": [
-                "*"
+                "./install.sh --prefix=/app/sdk --disable-ldconfig --verbose"
             ]
         },
         {
             "name": "nodejs",
-            "cleanup": [
-                "/include",
-                "/share",
-                "/app/lib/node_modules/npm/changelogs",
-                "/app/lib/node_modules/npm/doc",
-                "/app/lib/node_modules/npm/html",
-                "/app/lib/node_modules/npm/man",
-                "/app/lib/node_modules/npm/scripts"
-            ],
+            "buildsystem": "simple",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://nodejs.org/dist/v8.9.2/node-v8.9.2.tar.gz",
-                    "sha256": "8038fa61ac4562786fcc6d3229f3caa07a864b94bd5922fe75942a38ea1c3a3b"
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "url": "https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-x64.tar.xz",
+                    "sha256": "aca06db37589966829b1ef0f163a5859b156a1d8e51b415bf47590f667c30a25"
                 }
+            ],
+            "build-commands": [
+                "mkdir /app/sdk ; cp -r * /app/sdk/"
             ]
         },
         {
