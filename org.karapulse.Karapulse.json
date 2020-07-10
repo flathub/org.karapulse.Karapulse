@@ -1,7 +1,7 @@
 {
     "app-id": "org.karapulse.Karapulse",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.34",
+    "runtime-version": "3.36",
     "sdk": "org.gnome.Sdk",
     "command": "karapulse",
     "finish-args": [
@@ -24,7 +24,7 @@
         "append-path": "/app/sdk/bin",
         "env": {
             "RUSTFLAGS": "--remap-path-prefix =../",
-            "CARGO_HOME": "/run/build/Karapulse/cargo",
+            "CARGO_HOME": "/run/build/karapulse/cargo",
             "RUST_BACKTRACE": "1",
             "RUST_LOG": "karapulse=debug"
         }
@@ -41,6 +41,14 @@
                     ],
                     "url": "https://static.rust-lang.org/dist/2020-01-07/rust-nightly-x86_64-unknown-linux-gnu.tar.gz",
                     "sha256": "98e563ba7db92511718112d54de0546793677e9942f26b2c7e91dc291bb958af"
+                },
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "arm"
+                    ],
+                    "url": "https://static.rust-lang.org/dist/2020-01-07/rust-nightly-arm-unknown-linux-gnueabihf.tar.gz",
+                    "sha256": "b609631b0047228b70ac0edf2c85b9a3fe81ddd3a0b9981b938b97fed90ca119"
                 }
             ],
             "build-commands": [
@@ -58,6 +66,14 @@
                     ],
                     "url": "https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-x64.tar.xz",
                     "sha256": "aca06db37589966829b1ef0f163a5859b156a1d8e51b415bf47590f667c30a25"
+                },
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "arm"
+                    ],
+                    "url": "https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-armv7l.tar.gz",
+                    "sha256": "c078a009d21fc54e8d810af7d5b7952a7679891231be42caaca2d12a8cf446c2"
                 }
             ],
             "build-commands": [
@@ -74,10 +90,11 @@
             ],
             "sources": [
                 "npm-generated-sources.json",
+		"cargo-generated-sources.json",
                 {
-                    "type": "archive",
-                    "url": "https://gitlab.freedesktop.org/gdesmott/karapulse/uploads/cab4f4e406eecf58b288817359bfc2f2/karapulse-0.2.0.tar.xz",
-                    "sha256": "3994853dc9d4adf44715626c7568f6afe2639d2c9742a5bf23dd2e9e634cb206"
+                    "type": "git",
+                    "url": "https://gitlab.freedesktop.org/gdesmott/karapulse.git",
+                    "tag": "0.3.0"
                 }
             ]
         }
