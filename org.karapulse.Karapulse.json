@@ -1,8 +1,11 @@
 {
     "app-id": "org.karapulse.Karapulse",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
     "command": "karapulse",
     "finish-args": [
         "--filesystem=host",
@@ -21,7 +24,7 @@
         "/bin/npx"
     ],
     "build-options": {
-        "append-path": "/app/sdk/bin",
+        "append-path": "/usr/lib/sdk/rust-stable/bin:/app/sdk/bin",
         "env": {
             "RUSTFLAGS": "--remap-path-prefix =../",
             "CARGO_HOME": "/run/build/karapulse/cargo",
@@ -31,31 +34,6 @@
     },
     "modules": [
         {
-            "name": "rust",
-            "buildsystem": "simple",
-            "sources": [
-                {
-                    "type": "archive",
-                    "only-arches": [
-                        "x86_64"
-                    ],
-                    "url": "https://static.rust-lang.org/dist/2020-01-07/rust-nightly-x86_64-unknown-linux-gnu.tar.gz",
-                    "sha256": "98e563ba7db92511718112d54de0546793677e9942f26b2c7e91dc291bb958af"
-                },
-                {
-                    "type": "archive",
-                    "only-arches": [
-                        "arm"
-                    ],
-                    "url": "https://static.rust-lang.org/dist/2020-01-07/rust-nightly-arm-unknown-linux-gnueabihf.tar.gz",
-                    "sha256": "b609631b0047228b70ac0edf2c85b9a3fe81ddd3a0b9981b938b97fed90ca119"
-                }
-            ],
-            "build-commands": [
-                "./install.sh --prefix=/app/sdk --disable-ldconfig --verbose"
-            ]
-        },
-        {
             "name": "nodejs",
             "buildsystem": "simple",
             "sources": [
@@ -64,16 +42,16 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-x64.tar.xz",
-                    "sha256": "aca06db37589966829b1ef0f163a5859b156a1d8e51b415bf47590f667c30a25"
+                    "url": "https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.xz",
+                    "sha256": "4481a34bf32ddb9a9ff9540338539401320e8c3628af39929b4211ea3552a19e"
                 },
                 {
                     "type": "archive",
                     "only-arches": [
                         "arm"
                     ],
-                    "url": "https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-armv7l.tar.gz",
-                    "sha256": "c078a009d21fc54e8d810af7d5b7952a7679891231be42caaca2d12a8cf446c2"
+                    "url": "https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-armv7l.tar.xz",
+                    "sha256": "d0131a764c0f44821fdacb3c3ab8b35b52af060a98ac7a150ec49d4c540be3d7"
                 }
             ],
             "build-commands": [
@@ -90,11 +68,11 @@
             ],
             "sources": [
                 "npm-generated-sources.json",
-		"cargo-generated-sources.json",
+                "cargo-generated-sources.json",
                 {
                     "type": "git",
                     "url": "https://gitlab.freedesktop.org/gdesmott/karapulse.git",
-                    "tag": "0.4.0"
+                    "commit": "9bbdf06fbb6af4e2ea514b034e3f7e4b793b11a9"
                 }
             ]
         }
