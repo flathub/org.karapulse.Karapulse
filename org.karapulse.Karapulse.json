@@ -48,10 +48,10 @@
                 {
                     "type": "archive",
                     "only-arches": [
-                        "arm"
+                        "aarch64"
                     ],
-                    "url": "https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-armv7l.tar.xz",
-                    "sha256": "d0131a764c0f44821fdacb3c3ab8b35b52af060a98ac7a150ec49d4c540be3d7"
+                    "url": "https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-arm64.tar.xz",
+                    "sha256": "3904869935b7ecc51130b4b86486d2356539a174d11c9181180cab649f32cd2a"
                 }
             ],
             "build-commands": [
