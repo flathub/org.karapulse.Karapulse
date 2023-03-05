@@ -15,14 +15,21 @@
         "--socket=wayland",
         "--socket=pulseaudio",
         "--device=dri",
-	"--device=all"
+        "--device=all"
     ],
     "cleanup": [
         "/sdk",
         "/lib/node_modules",
         "/bin/npm",
         "/bin/node",
-        "/bin/npx"
+        "/bin/npx",
+        "/lib/libgst*",
+        "/pkgconfig",
+        "/share/gstreamer-1.0",
+        "/lib/pkgconfig",
+        "/include",
+        "/bin/gst-*",
+        "/bin/qrencode"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin:/app/sdk/bin",
@@ -60,6 +67,32 @@
             ]
         },
         {
+            "name": "qrencode",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://fukuchi.org/works/qrencode/qrencode-4.1.1.tar.gz",
+                    "sha512": "209bb656ae3f391b03c7b3ceb03e34f7320b0105babf48b619e7a299528b8828449e0e7696f0b5db0d99170a81709d0518e34835229a748701e7df784e58a9ce"
+                }
+            ]
+        },
+        {
+            "name": "gstqroverlay",
+            "buildsystem": "meson",
+            "config-opts": [
+                "--auto-features=disabled",
+                "-Dqroverlay=enabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.20.5.tar.xz",
+                    "sha256": "f431214b0754d7037adcde93c3195106196588973e5b32dcb24938805f866363"
+                }
+            ]
+        },
+        {
             "name": "karapulse",
             "buildsystem": "meson",
             "config-opts": [
@@ -73,7 +106,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.freedesktop.org/gdesmott/karapulse.git",
-                    "tag": "0.5.0"
+                    "tag": "0.5.1"
                 }
             ]
         }
