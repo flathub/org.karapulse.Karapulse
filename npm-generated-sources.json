@@ -1007,6 +1007,13 @@
         "url": "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz"
     },
     {
+        "dest": "npm-cache/_cacache/content-v2/sha512/69/9e",
+        "dest-filename": "67dcc630d74b78bfaf041af4461350cbee259f0224d4cb8312651a2a8c74d161d8d7e34b188097f8f0d65aeb365e5d5b8938407fd4d8bd2b34be0bf102d3",
+        "sha512": "699e67dcc630d74b78bfaf041af4461350cbee259f0224d4cb8312651a2a8c74d161d8d7e34b188097f8f0d65aeb365e5d5b8938407fd4d8bd2b34be0bf102d3",
+        "type": "file",
+        "url": "https://registry.npmjs.org/@cordobo/qrcode/-/qrcode-1.5.0.tgz"
+    },
+    {
         "dest": "npm-cache/_cacache/content-v2/sha512/f8/a7",
         "dest-filename": "58ae9282e53828990af60e5645e250c4a47728c678f920675d6187c158900a7e3d49b6e1d422a31af84d69249fb3de4bc356258cab2a8f946e096bb6a640",
         "sha512": "f8a758ae9282e53828990af60e5645e250c4a47728c678f920675d6187c158900a7e3d49b6e1d422a31af84d69249fb3de4bc356258cab2a8f946e096bb6a640",
@@ -1712,6 +1719,13 @@
         "sha512": "f112c50695d938d0d0c5818a8a179a610425de2c9d7ac0ab8562eecc30fa02c40370e17e1c4bc8b8e7c174969358a7eac8d64d5a31ef5f32324f46d422e9dbfc",
         "type": "file",
         "url": "https://registry.npmjs.org/angular-in-memory-web-api/-/angular-in-memory-web-api-0.14.0.tgz"
+    },
+    {
+        "dest": "npm-cache/_cacache/content-v2/sha512/3d/f5",
+        "dest-filename": "8fcfa6292a74de218cc18cb9e2297cbf638fe2774bff743012422e3be7af9660bbbde1c50c6059dd193162823781ba4f22e411b443c78f1e0618bc76e4db",
+        "sha512": "3df58fcfa6292a74de218cc18cb9e2297cbf638fe2774bff743012422e3be7af9660bbbde1c50c6059dd193162823781ba4f22e411b443c78f1e0618bc76e4db",
+        "type": "file",
+        "url": "https://registry.npmjs.org/angularx-qrcode/-/angularx-qrcode-14.0.0.tgz"
     },
     {
         "dest": "npm-cache/_cacache/content-v2/sha512/ff/ac",
@@ -2512,6 +2526,13 @@
         "url": "https://registry.npmjs.org/di/-/di-0.0.1.tgz"
     },
     {
+        "dest": "npm-cache/_cacache/content-v2/sha512/aa/24",
+        "dest-filename": "a5981abdf8109d080fcbe3a770f14cbdde6968c6c3d26f09e6e72aca9f6bcc3e2cbc2b202c91317acee57f8f904cb263866433ececa8d4fa68dbebbd247c",
+        "sha512": "aa24a5981abdf8109d080fcbe3a770f14cbdde6968c6c3d26f09e6e72aca9f6bcc3e2cbc2b202c91317acee57f8f904cb263866433ececa8d4fa68dbebbd247c",
+        "type": "file",
+        "url": "https://registry.npmjs.org/dijkstrajs/-/dijkstrajs-1.0.3.tgz"
+    },
+    {
         "dest": "npm-cache/_cacache/content-v2/sha512/5a/4a",
         "dest-filename": "d6a7d191e0a5df28663338b993b86562d545857f0b37efb9fd71ce79fed6fa0eeab217aa5c43901b88712c85a0e963dbfaa1a4abd9708389d1a633077320",
         "sha512": "5a4ad6a7d191e0a5df28663338b993b86562d545857f0b37efb9fd71ce79fed6fa0eeab217aa5c43901b88712c85a0e963dbfaa1a4abd9708389d1a633077320",
@@ -2594,6 +2615,13 @@
         "sha512": "fe4c8cd7c11f8a7c1765b9e8f45c9419e161f3b282f074500501a295d1d96c4b91c9614e9afd54d74a3d041a7c5d564354d36e40ac88188bb96580005c9d15d9",
         "type": "file",
         "url": "https://registry.npmjs.org/emojis-list/-/emojis-list-3.0.0.tgz"
+    },
+    {
+        "dest": "npm-cache/_cacache/content-v2/sha512/b9/c0",
+        "dest-filename": "27b8112150ae1ba07d878d5606e50da64323e8aefbf4bbfa1c4bece1770d12f00947618f8638584fd468a8e73e227293f68af152be1b458d08bcf93f69a7",
+        "sha512": "b9c027b8112150ae1ba07d878d5606e50da64323e8aefbf4bbfa1c4bece1770d12f00947618f8638584fd468a8e73e227293f68af152be1b458d08bcf93f69a7",
+        "type": "file",
+        "url": "https://registry.npmjs.org/encode-utf8/-/encode-utf8-1.0.3.tgz"
     },
     {
         "dest": "npm-cache/_cacache/content-v2/sha512/4c/f2",
@@ -4932,6 +4960,13 @@
         "sha512": "1d10f36da2a30be00e5955f1014ff1e7808e19e22ff5e6fee82903490a0d4ede17c96a0826fb8fb178b3c6efc5af6dc489e91bb59c2687521c206fe5fdad7419",
         "type": "file",
         "url": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-4.2.0.tgz"
+    },
+    {
+        "dest": "npm-cache/_cacache/content-v2/sha512/e3/44",
+        "dest-filename": "16e586a504d7d0a39c916268b0ed8cfa4ca295af787af7bd01d9813eddf429b1672b6e3d4fcc9831789d7d0d142384c6ca3c8b8c63cac569773c9a8a2557",
+        "sha512": "e34416e586a504d7d0a39c916268b0ed8cfa4ca295af787af7bd01d9813eddf429b1672b6e3d4fcc9831789d7d0d142384c6ca3c8b8c63cac569773c9a8a2557",
+        "type": "file",
+        "url": "https://registry.npmjs.org/pngjs/-/pngjs-5.0.0.tgz"
     },
     {
         "dest": "npm-cache/_cacache/content-v2/sha512/8a/91",
