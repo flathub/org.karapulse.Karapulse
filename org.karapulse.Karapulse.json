@@ -1,7 +1,7 @@
 {
     "app-id": "org.karapulse.Karapulse",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -106,7 +106,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.freedesktop.org/gdesmott/karapulse.git",
-                    "tag": "0.5.3"
+                    "tag": "0.5.4"
                 }
             ]
         }
