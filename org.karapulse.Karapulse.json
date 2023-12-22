@@ -106,7 +106,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.freedesktop.org/gdesmott/karapulse.git",
-                    "tag": "0.5.4"
+                    "commit": "6b90c6a589ba2634e24a15206f243de98a4c983c"
                 }
             ]
         }
