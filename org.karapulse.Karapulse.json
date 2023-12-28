@@ -96,7 +96,7 @@
             "name": "karapulse",
             "buildsystem": "meson",
             "config-opts": [
-                "-Dcdg-plugin=true",
+                "-Dcdg-plugin=enabled",
                 "-Dnpm-cache=/run/build/karapulse/npm-cache/",
                 "-Doffline=true"
             ],
@@ -106,7 +106,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.freedesktop.org/gdesmott/karapulse.git",
-                    "tag": "0.5.4"
+                    "tag": "0.6.0"
                 }
             ]
         }
